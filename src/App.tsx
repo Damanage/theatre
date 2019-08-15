@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import BaseLayout from "./layouts/Base";
+import { Route, Switch, RouteProps } from "react-router-dom";
+import history from "./utils/history";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { Router } from "react-router";
+import * as routes from "./constants/routes";
+import { RouteInterface } from "./interfaces";
+import Home from "./views/Home";
+import Tickets from "./views/Tickets";
+
+import "./App.css";
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Router history={history}>
+        <div>
+          <Switch>
+            <Route
+              path={routes.home.path}
+              exact={routes.home.exact}
+              component={BaseLayout(Home)}
+            />
+            <Route
+              path={routes.tickets.path}
+              exact={routes.tickets.exact}
+              component={BaseLayout(Tickets)}
+            />
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;
