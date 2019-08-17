@@ -5,7 +5,7 @@ import history from "./utils/history";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { Router } from "react-router";
 import * as routes from "./constants/routes";
-import { RouteInterface } from "./interfaces";
+import  performancesMockData  from "./mocks/performances/performancesMock";
 import Home from "./views/Home";
 import Tickets from "./views/Tickets";
 
@@ -21,12 +21,12 @@ const App: React.FC = () => {
             <Route
               path={routes.home.path}
               exact={routes.home.exact}
-              component={BaseLayout(Home)}
+              component={BaseLayout(Home, performancesMockData)}
             />
             <Route
               path={routes.tickets.path}
               exact={routes.tickets.exact}
-              component={BaseLayout(Tickets)}
+              component={BaseLayout(Tickets, performancesMockData)}
             />
           </Switch>
         </div>

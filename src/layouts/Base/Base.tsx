@@ -4,16 +4,16 @@ import Header from '../../components/Header'
 import Content from '../../components/Content'
 import styles from './styles'
 
-const BaseLayout = (Component: any) => {
+const BaseLayout = (Component: any, props: object) => {
   class ComponentWithLayout extends React.Component<any, {}> {
     render(): React.ReactNode {
-      const { classes, ...otherProps } = this.props
+      const { classes } = this.props
 
       return (
         <div className={classes.root}>
-          <Header title="╭(☉﹏☉)╮" />
+          <Header title="Театръ" />
           <Content>
-            <Component {...otherProps} />
+            <Component {...props} />
           </Content>
         </div>
       )
