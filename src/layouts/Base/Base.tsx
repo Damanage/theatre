@@ -8,7 +8,6 @@ const BaseLayout = (Component: any, props: object) => {
   class ComponentWithLayout extends React.Component<any, {}> {
     render(): React.ReactNode {
       const { classes } = this.props
-
       return (
         <div className={classes.root}>
           <Header title="Театръ" />

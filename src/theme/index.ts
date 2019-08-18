@@ -3,7 +3,7 @@ import { darken, lighten, fade } from '@material-ui/core/styles/colorManipulator
 import ExpandMore from '@material-ui/icons/ExpandMore'
 import createMyTheme from './createTheme'
 import createPalette from './createPalette'
-// import { ThemeMode } from '../constants/types'
+// import { ThemeMode } from '../index.ts/types'
 
 type ThemeMode = 'light' | 'dark'
 

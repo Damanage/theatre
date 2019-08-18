@@ -1,35 +1,39 @@
 import { createStyles, Theme } from '@material-ui/core'
+import { deepPurple } from '@material-ui/core/colors';
 
 export default (theme: Theme) =>
   createStyles({
-    sectionTitle: theme.sectionTitle as any,
-    sectionContent: {
-      marginBottom: theme.spacing(6),
-    },
-    businessTable: {
-      height: 'auto',
-    },
-    complexSearch: {
-      display: 'flex',
-      alignItems: 'stretch',
-      justifyContent: 'space-between',
-    },
-    complexSearchValue: {
-      flex: '1 1 100%',
-      maxWidth: '100%',
-    },
-    complexSearchValueInput: {
-      borderTopRightRadius: 0,
-      borderBottomRightRadius: 0,
-    },
-    complexSearchType: {
-      flex: `0 0 ${theme.spacing(25)}px`,
-      maxWidth: theme.spacing(25),
-      borderTopLeftRadius: 0,
-      borderBottomLeftRadius: 0,
-    },
-    complexSearchTypeInput: {
-      borderTopLeftRadius: 0,
-      borderBottomLeftRadius: 0,
-    },
+      card: {
+          width: '30%',
+          height: 'fit-content',
+          margin: theme.spacing(1),
+      },
+      media: {
+          height: 0,
+          paddingTop: '56.25%',
+      },
+      expand: {
+          transform: 'rotate(0deg)',
+          marginLeft: 'auto',
+          transition: theme.transitions.create('transform', {
+              duration: theme.transitions.duration.shortest,
+          }),
+      },
+      expandOpen: {
+          transform: 'rotate(180deg)',
+      },
+      avatar: {
+          backgroundColor: deepPurple[500],
+      },
+      chip: {
+          margin: theme.spacing(0.2),
+      },
+      link: {
+          margin: theme.spacing(0.5),
+      },
+      linkWrapper: {
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+      }
   })
