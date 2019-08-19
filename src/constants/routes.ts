@@ -1,13 +1,7 @@
 import {RouteInterface} from '../../src/interfaces'
 
-export const home: RouteInterface = {
-    path: '/',
-    title: 'Главная',
-    exact: true,
-}
-
 export const tickets: RouteInterface = {
-    path: '/tickets',
+    path: '/',
     title: 'Афиша и билеты',
     exact: false,
 }
