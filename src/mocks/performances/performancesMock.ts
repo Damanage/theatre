@@ -15,14 +15,6 @@ export default  [
         genres: ["Мюзкл", "Сказка"]
       }
     },
-    {
-      id: "2",
-      type: "performances",
-      attributes: {
-        title: "Хрустальные яйчишки",
-        genres: ["Мюзкл", "Сказка"]
-      }
-    }
   ]
 
 

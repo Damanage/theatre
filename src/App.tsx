@@ -7,7 +7,6 @@ import { Router } from "react-router";
 import * as routes from "./constants/routes";
 import  perfData  from "./mocks/performances/performancesMock";
 import  sessData  from "./mocks/sessions/sessionsMocks";
-import Home from "./views/Home";
 import Tickets from "./views/Tickets";
 
 import "./App.css";
@@ -19,11 +18,6 @@ const App: React.FC = () => {
       <Router history={history}>
         <div>
           <Switch>
-            <Route
-              path={routes.home.path}
-              exact={routes.home.exact}
-              component={BaseLayout(Home, perfData)}
-            />
             <Route
               path={routes.tickets.path}
               exact={routes.tickets.exact}

@@ -12,7 +12,6 @@ import { RouteInterface } from '../../interfaces'
 import * as routes from "../../constants/routes";
 
 const pages: RouteInterface[] = [
-  routes.home,
   routes.tickets,
 ]
 

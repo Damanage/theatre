@@ -22,6 +22,7 @@ import styles from "./styles";
 import moment from "moment";
 import { get } from "lodash";
 import star from "../../assets/superstar.jpg";
+import wolf from "../../assets/wolf.jpg";
 import {IPerformance, ISession} from "../../interfaces";
 
 class TicketsCard extends PureComponent<any & WithStyles> {
@@ -67,14 +68,12 @@ class TicketsCard extends PureComponent<any & WithStyles> {
         />
         <CardMedia
           className={classes.media}
-          image={star}
+          image={performanceData.id === '1' ? wolf : star}
           title={get(performanceData, "attributes.title", "-")}
         />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            This impressive paella is a perfect party dish and a fun meal to
-            cook together with your guests. Add 1 cup of frozen peas along with
-            the mussels, if you like.
+           Данное представление пройдет в нашем театре в ближайщие сроки, выбрать удобное время и купить билет Вы можете ниже.
           </Typography>
         </CardContent>
         <CardActions disableSpacing>

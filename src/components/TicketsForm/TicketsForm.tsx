@@ -22,7 +22,7 @@ class TicketsForm extends PureComponent<any, any> {
 
   handleDateChange = (date: Date | null) => {
     const { setFieldTouched, setFieldValue } = this.props;
-    setFieldValue("birthday", date, true);
+    setFieldValue("birthday", date, false);
     setFieldTouched("birthday", true, true);
   };
 
@@ -38,11 +38,11 @@ class TicketsForm extends PureComponent<any, any> {
   render() {
     const { handleSubmit, values, touched, errors, isValid } = this.props;
     const { first_name, last_name, email, birthday, type, agree } = values;
-    const typePayment = type === "cash";
+    const typePayment = type === "card";
     return (
       <>
         <form onSubmit={handleSubmit}>
-          <Grid container spacing={3}>
+          <Grid container spacing={4}>
             <Grid item xs={6}>
               <FormLabel
                 required

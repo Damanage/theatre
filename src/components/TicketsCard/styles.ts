@@ -4,7 +4,7 @@ import { deepPurple } from '@material-ui/core/colors';
 export default (theme: Theme) =>
   createStyles({
       card: {
-          width: '30%',
+          width: '45%',
           height: 'fit-content',
           margin: theme.spacing(1),
       },
